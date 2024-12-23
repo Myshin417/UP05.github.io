@@ -1,0 +1,177 @@
+body{
+    background-image: url(../img/фон.jpg);
+    background-size: cover;
+}
+nav a,
+footer a,
+span {
+    font-family: woodblock;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 900;
+    font-size: 150;
+    text-decoration: none;
+    font-size: large;
+}
+nav a{
+    border: 3px dotted red;
+}
+nav a:hover {
+    color: rgb(255, 1, 1);
+    transition-duration: 1s;
+}
+footer a {
+    border: 2px solid black;
+    padding: 5px;
+    background-color: rgb(153, 149, 149);
+}
+footer h3{
+    color: rgb(252, 252, 252);
+}
+footer a:hover {
+    background-color: rgb(74, 73, 73);
+    transition-duration: 1s;
+}
+footer p {
+    color: #fff;
+}
+article p {
+    font-size: 20px;
+    color: #000000;
+}
+table {
+    background-color: whitesmoke;
+}
+h1,
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 30px;
+}
+p {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(18, 18, 18);
+}
+hr {
+    height: 2px;
+    background-color: black;
+}
+nav {
+    color: #fff;
+    border: 2px black solid;
+    padding: 10px;
+   
+    background: linear-gradient(to right, #10c8d8, #99ce78);
+}
+/*Ссылка на внешний ресурс*/
+a[href^="https://"] {
+    color: blue;
+}
+/*двух колоночный макет*/
+#container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    /*  полупрозрачный контейнер */
+    background: rgba(255, 255, 255, 0.5);
+}
+header {
+    padding: 5px;
+    /*диагональный градиент*/
+    background: linear-gradient(45deg, rgba(128, 221, 233, 0.7), rgba(41, 227, 147, 0.7));
+}
+main {
+    margin-left: 0px;
+    padding: 10px;
+    background: #fff;
+}
+footer {
+    background-color: rgb(59, 58, 58);
+    color: #fff;
+    padding: 5px;
+    clear: right;
+}
+/*подсветка элементов форм*/
+input:focus,
+textarea:focus {
+    border: 2px solid rgb(255, 30, 0);
+    background-color: lightblue;
+}
+/*оформление таблицы */
+table,
+table tr th,
+table tr td{
+    border: 1px solid rgb(0, 0, 0);
+}
+.tableroutes, .tabledrivers, .tablework{
+    background-color: rgb(205, 204, 204);
+}
+table{
+    max-width: 700px;
+    width: 100%;
+}
+
+/*блок меню flexbox*/
+#navFlexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#navFlexbox a {
+    padding: 5px;
+}
+#navFlexbox a:hover {
+    transform: translatex(5px);
+    transition-duration: 1s;
+}
+#order{
+    background: radial-gradient(45deg, rgba(128, 221, 233, 0.7), rgba(41, 227, 147, 0.7));
+}
+/* При прокручивании страницы кнопка должна оставаться в нижней части экрана*/
+a[href^="#up"] {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    /*полупрозрачный фон*/
+    opacity: 0.5;
+}
+a[href^="#up"]:hover {
+    opacity: 1;
+}
+/*медиа запросы*/
+@media screen and (max-width:1000px) {
+    #container {
+        max-width: 1000px;
+        width: 100%;
+    }
+    main {
+        max-width: 1000px;
+        margin-left: 0;
+    }
+    #navFlexbox {
+        flex-wrap: wrap;
+    }
+    #navFlexbox a {
+        margin: 10px;
+    }
+    #navFlexbox a {
+        border: 1px black solid;
+        background-color: rgb(78, 190, 239);
+    }
+    #navFlexbox a {
+        font-size: 18px;
+        flex-wrap: nowrap;
+        margin: 5px;
+        border: none;
+        background: none;
+    }
+}
+@media screen and (max-width:640px) {
+    #navFlexbox {
+        flex-direction: column;
+    }
+}
